@@ -1,0 +1,2 @@
+module EnglishtypesHelper
+end

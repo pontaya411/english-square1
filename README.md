@@ -13,6 +13,10 @@
 | name       | string | NOT NULL |
 | profile    | text   | NOT NULL | 
 
+### association
+has_many :englishtypes
+has_many :comments
+
 
 ## comments テーブル
 
@@ -22,6 +26,10 @@
 | user      | reference |
 | englishtype | reference |
 
+### association
+belongs_to :user
+belongs_to :englishtype
+
 ## englishtypeテーブル
 
 | Column     | Type                | Options  |
@@ -30,3 +38,6 @@
 | english_note | text                | NOT NULL |
 | image      | #ActiveStorageで実装 |
 | user       | reference           |
+
+belongs_to :user
+has_many :comments
